@@ -1,11 +1,16 @@
 function f (arg1, arg2) {
-    if (arg1.length <= arg2.length) {
-      return [...arg1, ...arg2]
+    let x = arg1.reduce((a, b) => a + b, 0);
+    let y = arg2.reduce((a, b) => a + b, 0);
+
+    if (x >= y){
+        return [...arg1, ...arg2];
     }
-   
-    else return []
-  }
-  
+    else {
+        return [...arg2, ...arg1];
+    }
+    
+  };
+
   
 //
 //
@@ -39,7 +44,3 @@ function f (arg1, arg2) {
  
  
   
-console.log(f([14, 2], [1]));
-console.log(f([14, 2], [1]));
-console.log(f([14, 2], [1]));
-console.log(f([14, 2], [1]));
